@@ -55,22 +55,22 @@ document.addEventListener("DOMContentLoaded", () => {
      SPRITES (UNCHANGED)
   ===================== */
   const animations = {
-    idle: { src: "Image/Buddy/idle.png", cols: 10, rows: 34, frames: 340, speed: 110 },
-    emote2: { src: "Image/Buddy/emote2.png", cols: 10, rows: 5, frames: 43, speed: 200 },
-    sleep: { src: "Image/Buddy/sleep.png", cols: 10, rows: 5, frames: 50, speed: 110 },
+    idle: { src: "https://24tupm3-4.github.io/My-hobbies/Image/Buddy/idle.png", cols: 10, rows: 34, frames: 340, speed: 110 },
+    emote2: { src: "https://24tupm3-4.github.io/My-hobbies/Image/Buddy/emote2.png", cols: 10, rows: 5, frames: 43, speed: 200 },
+    sleep: { src: "https://24tupm3-4.github.io/My-hobbies/Image/Buddy/sleep.png", cols: 10, rows: 5, frames: 50, speed: 110 },
 
-    runUp: { src: "Image/Buddy/backward.png", cols: 10, rows: 2, frames: 18, speed: 100 },
-    runDown: { src: "Image/Buddy/forward.png", cols: 10, rows: 2, frames: 18, speed: 100 },
-    runLeft: { src: "Image/Buddy/left.png", cols: 10, rows: 2, frames: 18, speed: 100 },
-    runRight: { src: "Image/Buddy/right.png", cols: 10, rows: 2, frames: 18, speed: 100 },
+    runUp: { src: "https://24tupm3-4.github.io/My-hobbies/Image/Buddy/backward.png", cols: 10, rows: 2, frames: 18, speed: 100 },
+    runDown: { src: "https://24tupm3-4.github.io/My-hobbies/Image/Buddy/forward.png", cols: 10, rows: 2, frames: 18, speed: 100 },
+    runLeft: { src: "https://24tupm3-4.github.io/My-hobbies/Image/Buddy/left.png", cols: 10, rows: 2, frames: 18, speed: 100 },
+    runRight: { src: "https://24tupm3-4.github.io/My-hobbies/Image/Buddy/right.png", cols: 10, rows: 2, frames: 18, speed: 100 },
 
-    upLeft: { src: "Image/Buddy/upLeft.png", cols: 10, rows: 2, frames: 18, speed: 100 },
-    upRight: { src: "Image/Buddy/upRight.png", cols: 10, rows: 2, frames: 18, speed: 100 },
-    downLeft: { src: "Image/Buddy/downLeft.png", cols: 10, rows: 2, frames: 18, speed: 100 },
-    downRight: { src: "Image/Buddy/downRight.png", cols: 10, rows: 2, frames: 18, speed: 100 },
+    upLeft: { src: "https://24tupm3-4.github.io/My-hobbies/Image/Buddy/upLeft.png", cols: 10, rows: 2, frames: 18, speed: 100 },
+    upRight: { src: "https://24tupm3-4.github.io/My-hobbies/Image/Buddy/upRight.png", cols: 10, rows: 2, frames: 18, speed: 100 },
+    downLeft: { src: "https://24tupm3-4.github.io/My-hobbies/Image/Buddy/downLeft.png", cols: 10, rows: 2, frames: 18, speed: 100 },
+    downRight: { src: "https://24tupm3-4.github.io/My-hobbies/Image/Buddy/downRight.png", cols: 10, rows: 2, frames: 18, speed: 100 },
 
-    walkLeft: { src: "Image/Buddy/walkL.png", cols: 10, rows: 9, frames: 18, speed: 90 },
-    walkRight:{ src: "Image/Buddy/walkR.png", cols: 10, rows: 9, frames: 18, speed: 90 },
+    walkLeft: { src: "https://24tupm3-4.github.io/My-hobbies/Image/Buddy/walkL.png", cols: 10, rows: 9, frames: 18, speed: 90 },
+    walkRight:{ src: "https://24tupm3-4.github.io/My-hobbies/Image/Buddy/walkR.png", cols: 10, rows: 9, frames: 18, speed: 90 },
   };
 
   /* =====================

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Games</title>
+<link rel="stylesheet" href="style.css" />
+
+</head>
+
+
+
+  <body data-page="games">
+
+  <div id="buddy"></div>
+  <div id="buddy-speech"></div>
+  <div class="custom-cursor"></div>
+<script src="java.js" defer></script>
+
+
+
+  <!-- ===== TOP NAVIGATION ===== -->
+  <nav class="top-nav">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="animals.html">Animals</a></li>
+      <li><a href="games.html">Games</a></li>
+      <li><a href="music.html">Music</a></li>
+    </ul>
+  </nav>
+
+<header class="hero-header">
+  <div class="hero-text">
+    <h1>Games</h1>
+    <p>What I would play if I wish to pass some time</p>
+  </div>
+</header>
+
+
+
+<div class="page-wrapper">
+
+<aside class="side-content left">
+  <h3>🎮 Player Profile</h3>
+
+  <ul class="sidebar-list">
+    <li><span class="icon">🕹️</span><span>Roblox: (Bqrxaliz)</span></li>
+    <li><span class="icon">🏆</span><span>Steam: (AxroraBqrxaliz)</span></li>
+    <li><span class="icon">🎯</span><span>Relaxing Games Suggession</span></li>
+    <li><span>- Animal Crossing</span></li>
+    <li><span>- Stardew Valley</span></li>
+    <li><span class="icon">⏳</span><span>Fighting Games Suggession</span></li>
+    <li><span>- Super Smash Bros</span></li>
+    <li><span>- Mortal Kombat</span></li>
+    <li><span class="icon">👾</span><span>Multiplayer Games Suggession</span></li>
+    <li><span>- Among Us</span></li>
+    <li><span>- Pico Park</span></li>
+  </ul>
+</aside>
+
+
+<main class="main-content">
+    <section class="games-list">
+
+      <div class="game-card" data-info="Roblox has millions of player-made worlds!">
+        <img src="Image/roblox.jpg" alt="Roblox">
+        <div class="text">
+          <h3>Roblox</h3>
+          <p>
+            Roblox is a game consisting of multiple games within the app. It also have a building studio to spark creativity. I like to build and play in Roblox as I can use my imagination to be built in this game.
+          </p>
+        </div>
+      </div>
+
+      <div class="game-card" data-info="Limbus Company is inspired by classic literature.">
+        <img src="Image/limbus.webp" alt="Limbus Company">
+        <div class="text">
+          <h3>Limbus Company</h3>
+          <p>
+            A Turn-based strategy RPG game with a strong narrative and more favorable characters.
+          </p>
+        </div>
+      </div>
+
+      <div class="game-card" data-info="Steam hosts thousands of indie games.">
+        <img src="Image/steam.jpg" alt="Steam Games">
+        <div class="text">
+          <h3>Steam Games</h3>
+          <p>
+            Games like Phasmophobia and Peak or any other multiplayer games gives me joy in working as a team with my friends and other people.
+          </p>
+        </div>
+      </div>
+
+    </section>
+
+    <section class="steam-library">
+  <h2>My Steam Library</h2>
+
+  <div class="steam-row">
+
+    <div class="steam-game">
+      <img src="Image/baba.jpg" alt="Baba Is You cover">
+      <span class="game-title">Baba Is You</span>
+      <span class="game-tag">Puzzle / Indie</span>
+    </div>
+
+    <div class="steam-game">
+      <img src="Image/omori.webp" alt="OMORI cover">
+      <span class="game-title">OMORI</span>
+      <span class="game-tag">Story / Psychological</span>
+    </div>
+
+    <div class="steam-game">
+      <img src="Image/umamusume.webp" alt="Uma Musume cover">
+      <span class="game-title">Uma Musume</span>
+      <span class="game-tag">Simulation / Gacha</span>
+    </div>
+
+    <div class="steam-game">
+      <img src="Image/phasmophobia.jpg" alt="Phasmophobia cover">
+      <span class="game-title">Phasmophobia</span>
+      <span class="game-tag">Co-op / Horror</span>
+    </div>
+
+  </div>
+</section>
+
+
+</main>
+
+
+
+
+<aside class="side-content right">
+  <h3>Game Screenshots</h3>
+
+  <img src="Image/umascreenshot.png">
+  <img src="Image/phasmoscreenshot.png">
+  <img src="Image/omoriscreenshot.png">
+  <img src="Image/robloxscreenshot.png">
+  <img src="Image/limbusscreenshot.webp">
+  <img src="Image/umascreenshot2.png">
+</aside>
+
+
+
+ <script>
+    const cursor = document.querySelector(".custom-cursor");
+    document.addEventListener("mousemove", e => {
+      cursor.style.left = e.clientX + "px";
+      cursor.style.top = e.clientY + "px";
+    });
+  </script>
+
+</div>
+
+<footer>
+<p>&copy; 3-4 | 24</p>
+</footer>
+
+</body>
+</html>

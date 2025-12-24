@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Music</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <body data-page="music">
+
+  <div id="buddy"></div>
+  <div id="buddy-speech"></div>
+<script src="java.js" defer></script>
+
+  <div class="custom-cursor"></div>
+
+    <!-- ===== TOP NAVIGATION ===== -->
+    <nav class="top-nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="animals.html">Animals</a></li>
+        <li><a href="games.html">Games</a></li>
+        <li><a href="music.html">Music</a></li>
+      </ul>
+    </nav>
+
+  <!-- ===== HEADER HERO ===== -->
+  <header class="hero-header">
+    <div class="hero-text">
+      <h1>Music</h1>
+      <p>Where sound becomes inspiration</p>
+    </div>
+  </header>
+
+
+
+  <div class="page-wrapper">
+
+    <!-- LEFT SIDEBAR -->
+   <aside class="side-content">
+  <h3>🎵 Music Vibes</h3>
+
+  <div class="sidebar-music">
+    <span class="sidebar-label">🌙 Relaxing</span>
+   <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/6C3NjslaxrAHpiU9W5XTiV?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+<iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/0ZqRlZTgNbQgynrHdxzLHp?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    <span class="sidebar-label">🔥 Upbeat</span>
+<iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/2YAzpDuHmAe5kROOlyDnmv?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+  
+</div>
+</aside>
+
+  
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+  
+      <section id="playlist">
+        <h2>My Spotify Playlist</h2>
+        <p>These are some songs & tracks I vibe with often.</p>
+  
+        <div class="music-row">
+          <div class="music-embed">
+          <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/2asWe7CTLmXiGRaWqHZ1rk?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            </div>
+            <div class="music-embed">
+              <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/4FDr0iOEB8lEDgpvCvEYWi?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            </div>
+            <div class="music-embed">
+              <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/0uB1QGOrJtZtFslsoSdRAv?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            </div>
+              <div class="music-embed">
+            <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/2GTnNEuVtXkvHFoFjsIK4e?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        </div>
+            </div>
+        </section>
+  
+      <div class="divider-neon"></div>
+  
+      <section id="more-music">
+        <h2>Full Playlist</h2>
+        <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/2UB7HZOTv2xcYPjahTYmVL?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+         </section>
+         
+         
+    </main>
+  
+    <aside class="side-content artist-sidebar">
+  <h3>🎤 Featured Artists</h3>
+
+  <ul class="artist-list">
+    <li>
+      <img src="Image/boen.jpg" alt="Bo en">
+      <span>Bo en</span>
+    </li>
+    <li>
+      <img src="Image/keinasuda.jpg" alt="Keina Suda">
+      <span>Keina Suda</span>
+    </li>
+    <li>
+      <img src="Image/muship.webp" alt="Mushi-P">
+      <span>Mushi-P</span>
+    </li>
+  </ul>
+</aside>
+
+  
+  </div>
+  
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <p>&copy; 3-4 | 24</p>
+  </footer>
+
+  <script>
+    const cursor = document.querySelector(".custom-cursor");
+    document.addEventListener("mousemove", e => {
+      cursor.style.left = e.clientX + "px";
+      cursor.style.top = e.clientY + "px";
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+        <html lang="en">
+        <head>
+          <meta charset="UTF-8" />
+          <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+          <title>A Page of Interests</title>
+
+          <!-- GLOBAL CSS -->
+          <link rel="stylesheet" href="style.css" />
+
+          <!-- DESKTOP BUDDY SCRIPT -->
+          <script src="java.js" defer></script>
+        </head>
+
+        <body data-page="index">
+
+          <!-- Buddy + Cursor -->
+          <div id="buddy"></div>
+          <div id="buddy-speech"></div>
+
+
+          <!-- ===== TOP NAVIGATION ===== -->
+          <nav class="top-nav">
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="animals.html">Animals</a></li>
+              <li><a href="games.html">Games</a></li>
+              <li><a href="music.html">Music</a></li>
+            </ul>
+          </nav>
+
+          <!-- ===== HEADER HERO ===== -->
+          <header class="hero-header">
+            <div class="hero-text">
+              <h1>Welcome</h1>
+              <p>to a page of my interests</p>
+            </div>
+          </header>
+        <div class="ui-divider"></div>
+          <!-- ===== MAIN LAYOUT ===== -->
+          <div class="page-wrapper">
+
+            <!-- LEFT SIDEBAR -->
+            <aside class="side-content left">
+              <div class="sidebar-list">
+              <img src="Image/clouddecor.jpg">
+              <img src="Image/tigerdeco.jpg">
+              <img src="Image/chinadecor.jpg">
+              </div>
+            </aside>
+
+            <!-- MAIN CONTENT -->
+            <main class="main-content">
+
+             <section id="about" class="about-intro">
+  <h2>About Me</h2>
+  <div class="about-card">
+    <p>
+      Hello! My name is Ninja, and I'm excited to share some of my interests to you.
+    </p>
+  </div>
+</section>
+
+        <div class="ui-divider"></div>
+              <section id="interests">
+                <h2>My Interests</h2>
+
+                <div class="hobbies-list">
+
+                  <div class="hobby-card">
+                    <img src="Image/animals.webp" alt="Animals">
+                    <div class="text">
+                      <h3>Bonding with Animals</h3>
+                      <p>I love caring for cats, horses, and other pets.</p>
+                    </div>
+                  </div>
+
+                  <div class="hobby-card">
+                    <img src="Image/games.webp" alt="Games">
+                    <div class="text">
+                      <h3>Playing Games</h3>
+                      <p>Gaming is fun, from casual to serious sessions.</p>
+                    </div>
+                  </div>
+
+                  <div class="hobby-card">
+                    <img src="Image/music.jpg" alt="Music">
+                    <div class="text">
+                      <h3>Music</h3>
+                      <p>Listening to them makes me feel relaxed.</p>
+                    </div>
+                  </div>
+
+                </div>
+              </section>
+        <div class="ui-divider"></div>
+            </main>
+
+            <!-- RIGHT SIDEBAR -->
+            <aside class="side-content right">
+                <div class="sidebar-list">
+              <img src="Image/goldship1.jpg">
+              <img src="Image/agnes tachyon   𝜗ৎ.jpg">
+              <img src="Image/vodkauma.jpg">
+              </div>
+            </aside>
+
+          </div>
+
+          <!-- ===== CONTACT SECTION (BOTTOM) ===== -->
+          <section id="contact" class="contact-section">
+            <div class="contact-form">
+              <h2>Contact Me</h2>
+              <form>
+                <input type="text" name="name" placeholder="Your username (Platform)" />
+                <input type="text" name="interests" placeholder="Your interests / hobbies" />
+                <button type="submit">Send</button>
+              </form>
+            </div>
+          </section>
+
+          <!-- ===== FOOTER ===== -->
+          <footer>
+            <p>&copy; 3-4 | 24</p>
+          </footer>
+
+ <script>
+    const cursor = document.querySelector(".custom-cursor");
+    document.addEventListener("mousemove", e => {
+      cursor.style.left = e.clientX + "px";
+      cursor.style.top = e.clientY + "px";
+    });
+  </script>
+
+        </body>
+        </html>

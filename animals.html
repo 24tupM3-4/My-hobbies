@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Animals</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <body data-page="animals">
+
+  <div id="buddy"></div>
+  <div id="buddy-speech"></div>
+  <div class="custom-cursor"></div>
+<script src="java.js" defer></script>
+
+  <!-- ===== TOP NAVIGATION ===== -->
+  <nav class="top-nav">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="animals.html">Animals</a></li>
+      <li><a href="games.html">Games</a></li>
+      <li><a href="music.html">Music</a></li>
+    </ul>
+  </nav>
+
+  <!-- ===== HEADER HERO ===== -->
+  <header class="hero-header">
+    <div class="hero-text">
+      <h1>Animals</h1>
+      <p>A special bonding with different species</p>
+    </div>
+  </header>
+
+
+
+<div class="page-wrapper">
+
+  <!-- LEFT SIDEBAR -->
+ <aside class="side-content left">
+  <h3>🐾 Creature Log</h3>
+
+  <ul class="sidebar-list">
+    <li><span class="icon">🐱</span><span>Cats</span></li>
+    <img src="Image/cattioorange.jpg">
+    <li><span class="icon">🐎</span><span>Horses</span></li>
+    <img src="Image/horse.png">
+    <li><span class="icon">🌿</span><span>Calm environments</span></li>
+    <img src="Image/landscape.jpg">
+    <li><span class="icon">🤍</span><span>Gentle care</span></li>
+    <img src="Image/clouddecor.jpg">
+  </ul>
+</aside>
+
+
+  <!-- MAIN CONTENT -->
+  <main class="main-content">
+
+    <section id="animal-overview">
+      <h2>Animals I’ve Met</h2>
+
+    </section>
+
+    <section id="animal-cards" class="hobbies-list">
+      <div class="hobby-card">
+        <img src="Image/cat.jpg" alt="A beautiful cat" />
+        <h3>Siamese Cat (Visited at Saman Farm)</h3>
+        <p>Friendly and adorable, met this adorable fluff during my visit.</p>
+      </div>
+
+      <div class="hobby-card">
+        <img src="Image/horse.jpg" alt="A horse" />
+        <h3>Horse from Saman Farm</h3>
+        <p>Gentle during our horse trails, also adorable as well.</p>
+      </div>
+    </section>
+
+    <section id="farm-map" class="full-bleed">
+  <h2>Farm Location</h2>
+
+  <div class="map-container">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d123619.18604958028!2d100.94023569726562!3d14.4789719!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x311dc6a28dc12f2f%3A0x444a8c096a7cb3a1!2z4Liq4Lih4Liy4LiZ4Lif4Liy4Lij4LmM4Lih!5e0!3m2!1sen!2sth!4v1766547338733!5m2!1sen!2sth" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+</section>
+
+
+  </main>
+
+  <!-- RIGHT SIDEBAR -->
+ <aside class="side-content right">
+  <h3>📝 Care Notes</h3>
+
+  <ul class="sidebar-list">
+    <li><span>Cats are usually independant creatures, so its best not to bother them too much.</span></li>
+    <li><span>Cats are also usually clean, so you don't have to shower them too often.</span></li>
+    <li><span>Cats need taurine, an amino acid which improves their heart and eye health, finding food with these ingredients can help your cat stay healthy.</span></li>
+    <li><span>Horses require extended hours of walking, letting them out for some exercise and fresh air is ideal.</span></li>
+    <li><span>It is best to not stand by a horse's rear end, as it is their blind spot and they will kick you without noticing.</span></li>
+    <li><span>Horses need a hoof check appointments every 4-8 weeks to prevent any injuries from hoof diseases.</span></li>
+  </ul>
+</aside>
+
+</div>
+
+<footer>
+  <p>&copy; 3-4 | 24</p>
+</footer>
+
+ <script>
+    const cursor = document.querySelector(".custom-cursor");
+    document.addEventListener("mousemove", e => {
+      cursor.style.left = e.clientX + "px";
+      cursor.style.top = e.clientY + "px";
+    });
+  </script>
+
+</body>
+</html>

@@ -56,15 +56,15 @@ document.addEventListener("DOMContentLoaded", () => {
     runUp: { src: "/My-hobbies/Image/Buddy/backward.png", cols: 10, rows: 2, frames: 18, speed: 100 },
     runDown: { src: "/My-hobbies/Image/Buddy/forward.png", cols: 10, rows: 2, frames: 18, speed: 100 },
     runLeft: { src: "/My-hobbies/Image/Buddy/left.png", cols: 10, rows: 2, frames: 18, speed: 100 },
-    runRight: { src: "My-hobbies/Image/Buddy/right.png", cols: 10, rows: 2, frames: 18, speed: 100 },
+    runRight: { src: "/My-hobbies/Image/Buddy/right.png", cols: 10, rows: 2, frames: 18, speed: 100 },
 
     upLeft: { src: "/My-hobbies/Image/Buddy/upLeft.png", cols: 10, rows: 2, frames: 18, speed: 100 },
     upRight: { src: "/My-hobbies/Image/Buddy/upRight.png", cols: 10, rows: 2, frames: 18, speed: 100 },
     downLeft: { src: "/My-hobbies/Image/Buddy/downLeft.png", cols: 10, rows: 2, frames: 18, speed: 100 },
     downRight: { src: "/My-hobbies/Image/Buddy/downRight.png", cols: 10, rows: 2, frames: 18, speed: 100 },
 
-    walkLeft: { src: "My-hobbies/Image/Buddy/walkL.png", cols: 10, rows: 9, frames: 18, speed: 90 },
-    walkRight:{ src: "My-hobbies/Image/Buddy/walkR.png", cols: 10, rows: 9, frames: 18, speed: 90 },
+    walkLeft: { src: "/My-hobbies/Image/Buddy/walkL.png", cols: 10, rows: 9, frames: 18, speed: 50 },
+    walkRight:{ src: "/My-hobbies/Image/Buddy/walkR.png", cols: 10, rows: 9, frames: 18, speed: 50 },
   };
 
   /* functions and scale */
@@ -373,6 +373,7 @@ page = "/" + page.split("/").pop();
   }
   follow();
 });
+
 
 
 

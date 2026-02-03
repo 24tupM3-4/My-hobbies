@@ -56,18 +56,18 @@ document.addEventListener("DOMContentLoaded", () => {
   ===================== */
   const animations = {
     idle: { src: "/My-hobbies/Image/Buddy/idle.png", cols: 10, rows: 34, frames: 340, speed: 110 },
-    emote2: { src: "My-hobbies/Image/Buddy/emote2.png", cols: 10, rows: 5, frames: 43, speed: 200 },
-    sleep: { src: "My-hobbies/Image/Buddy/sleep.png", cols: 10, rows: 5, frames: 50, speed: 110 },
+    emote2: { src: "/My-hobbies/Image/Buddy/emote2.png", cols: 10, rows: 5, frames: 43, speed: 200 },
+    sleep: { src: "/My-hobbies/Image/Buddy/sleep.png", cols: 10, rows: 5, frames: 50, speed: 110 },
 
-    runUp: { src: "My-hobbies/Image/Buddy/backward.png", cols: 10, rows: 2, frames: 18, speed: 100 },
-    runDown: { src: "My-hobbies/Image/Buddy/forward.png", cols: 10, rows: 2, frames: 18, speed: 100 },
-    runLeft: { src: "My-hobbies/Image/Buddy/left.png", cols: 10, rows: 2, frames: 18, speed: 100 },
+    runUp: { src: "/My-hobbies/Image/Buddy/backward.png", cols: 10, rows: 2, frames: 18, speed: 100 },
+    runDown: { src: "/My-hobbies/Image/Buddy/forward.png", cols: 10, rows: 2, frames: 18, speed: 100 },
+    runLeft: { src: "/My-hobbies/Image/Buddy/left.png", cols: 10, rows: 2, frames: 18, speed: 100 },
     runRight: { src: "My-hobbies/Image/Buddy/right.png", cols: 10, rows: 2, frames: 18, speed: 100 },
 
-    upLeft: { src: "My-hobbies/Image/Buddy/upLeft.png", cols: 10, rows: 2, frames: 18, speed: 100 },
-    upRight: { src: "My-hobbies/Image/Buddy/upRight.png", cols: 10, rows: 2, frames: 18, speed: 100 },
-    downLeft: { src: "My-hobbies/Image/Buddy/downLeft.png", cols: 10, rows: 2, frames: 18, speed: 100 },
-    downRight: { src: "My-hobbies/Image/Buddy/downRight.png", cols: 10, rows: 2, frames: 18, speed: 100 },
+    upLeft: { src: "/My-hobbies/Image/Buddy/upLeft.png", cols: 10, rows: 2, frames: 18, speed: 100 },
+    upRight: { src: "/My-hobbies/Image/Buddy/upRight.png", cols: 10, rows: 2, frames: 18, speed: 100 },
+    downLeft: { src: "/My-hobbies/Image/Buddy/downLeft.png", cols: 10, rows: 2, frames: 18, speed: 100 },
+    downRight: { src: "/My-hobbies/Image/Buddy/downRight.png", cols: 10, rows: 2, frames: 18, speed: 100 },
 
     walkLeft: { src: "My-hobbies/Image/Buddy/walkL.png", cols: 10, rows: 9, frames: 18, speed: 90 },
     walkRight:{ src: "My-hobbies/Image/Buddy/walkR.png", cols: 10, rows: 9, frames: 18, speed: 90 },
@@ -385,4 +385,5 @@ page = "/" + page.split("/").pop();
   }
   follow();
 });
+
 

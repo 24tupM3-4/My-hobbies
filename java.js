@@ -3,9 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const buddy = document.getElementById("buddy");
   if (!buddy) return;
 
-  /* =====================
-     CONFIG
-  ===================== */
+  /* main settings */
   const SPRITE = 350;
   const SCALE = 200 / SPRITE;
   const FRAME = SPRITE;
@@ -22,9 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const SLEEP_TIME = 10000;
   const SLEEP_DURATION = 8000;
 
-  /* =====================
-     STATE
-  ===================== */
+  /* variable */
   let x = 20, y = 0;
   let vx = 0, vy = 0;
 
@@ -51,9 +47,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   let mode = "idle"; // idle | player | target | auto | emote | sleep
 
-  /* =====================
-     SPRITES (UNCHANGED)
-  ===================== */
+  /* buddysprite */
   const animations = {
     idle: { src: "/My-hobbies/Image/Buddy/idle.png", cols: 10, rows: 34, frames: 340, speed: 110 },
     emote2: { src: "/My-hobbies/Image/Buddy/emote2.png", cols: 10, rows: 5, frames: 43, speed: 200 },
@@ -73,9 +67,7 @@ document.addEventListener("DOMContentLoaded", () => {
     walkRight:{ src: "My-hobbies/Image/Buddy/walkR.png", cols: 10, rows: 9, frames: 18, speed: 90 },
   };
 
-  /* =====================
-     HELPERS
-  ===================== */
+  /* functions and scale */
   function setAnim(name, once = false) {
     if (current === name) return;
     if (lockedAnim && !once) return;
@@ -100,9 +92,7 @@ document.addEventListener("DOMContentLoaded", () => {
       `-${col * FRAME * SCALE}px -${row * FRAME * SCALE}px`;
   }
 
-  /* =====================
-     INPUT
-  ===================== */
+  /* keybind */
   const keys = {};
   window.addEventListener("keydown", e => keys[e.key.toLowerCase()] = true);
   window.addEventListener("keyup", e => keys[e.key.toLowerCase()] = false);
@@ -114,9 +104,7 @@ document.addEventListener("DOMContentLoaded", () => {
     mode = "target";
   });
 
-  /* =====================
-     MAIN LOOP
-  ===================== */
+  /* loops */
   function loop(t) {
     const delta = t - last;
     last = t;
@@ -124,7 +112,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let dx = 0, dy = 0;
     const usingKeys = keys.w || keys.a || keys.s || keys.d;
 
-    /* ===== HARD LOCK STATES ===== */
+    /* other emote */
     if (mode === "sleep") {
       sleepTimer -= delta;
       if (sleepTimer <= 0) {
@@ -144,7 +132,7 @@ document.addEventListener("DOMContentLoaded", () => {
       return;
     }
 
-    /* ===== PLAYER ===== */
+    /* key usage */
     if (usingKeys) {
       mode = "player";
       targetX = targetY = null;
@@ -156,7 +144,7 @@ document.addEventListener("DOMContentLoaded", () => {
       if (keys.s) dy++;
     }
 
-    /* ===== TARGET MOVE ===== */
+    /* movement mouse */
     else if (mode === "target" && targetX !== null) {
       const rx = targetX - x;
       const ry = targetY - y;
@@ -170,7 +158,7 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     }
 
-    /* ===== RNG WALK ===== */
+    /* walker */
     else if (rngTimer > 0) {
       rngTimer -= delta;
       dx = rngDir;
@@ -180,7 +168,7 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     }
 
-    /* ===== IDLE ===== */
+    /* idle */
     else {
       idleTime += delta;
 
@@ -219,22 +207,22 @@ document.addEventListener("DOMContentLoaded", () => {
     if (Math.abs(vx) < IDLE_VEL) vx = 0;
     if (Math.abs(vy) < IDLE_VEL) vy = 0;
 
-    /* ===== BOUNDS ===== */
+    /* border */
     const maxX = window.innerWidth - buddy.offsetWidth;
     const maxY = window.innerHeight - buddy.offsetHeight;
     x = Math.max(0, Math.min(maxX, x));
     y = Math.max(0, Math.min(maxY, y));
 
-    /* ===== ANIMATION ===== */
-  /* ===== ANIMATION ===== */
+    /* animation */
+  /* animation */
 const moving = vx !== 0 || vy !== 0;
 
-/* AUTO WALK has priority */
+/* autowalk anim play */
 if (mode === "auto" && moving) {
   setAnim(rngDir > 0 ? "walkRight" : "walkLeft");
 }
 
-/* PLAYER / TARGET movement */
+/* movement to place */
 else if (moving) {
   if (Math.abs(vx) > 0.5 && Math.abs(vy) > 0.5) {
     setAnim(
@@ -251,7 +239,7 @@ else if (moving) {
   }
 }
 
-/* IDLE */
+/* idle2 */
 else {
   setAnim("idle");
 }
@@ -285,7 +273,7 @@ draw();
 
   }
 
-  /* ===== SPAWN ===== */
+  /* spawn */
   const preload = new Image();
   preload.src = animations.idle.src;
   preload.onload = () => {
@@ -303,7 +291,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const speech = document.getElementById("buddy-speech");
   if (!buddy || !speech) return;
 
-  /* === PAGE IDENTIFIER === */
+  /* page awareness */
  let page = location.pathname;
 
 // handle "/" → "/index.html"
@@ -316,7 +304,7 @@ page = "/" + page.split("/").pop();
 
 
 
-  /* === PAGE-SPECIFIC DIALOGUE === */
+  /* page dialogue */
   const dialogueMap = {
     "/index.html": [
       "Welcome to my page!",
@@ -347,11 +335,11 @@ page = "/" + page.split("/").pop();
   const dialogue = dialogueMap[page] || dialogueMap["default"];
   let index = 0;
 
-  /* === POSITION OFFSETS === */
+  /* offset */
   const OFFSET_X = 210; // right of buddy
   const OFFSET_Y = -20; // slightly up
 
-  /* === BOUNDS === */
+  /* border */
   function updatePosition() {
     const rect = buddy.getBoundingClientRect();
     speech.style.left = rect.right + OFFSET_X - buddy.offsetWidth + "px";
@@ -359,7 +347,7 @@ page = "/" + page.split("/").pop();
   }
 
  function speak() {
-  // 🚫 no talking while sleeping
+  // no talk
   if (buddy.dataset.mode === "sleep") return;
 
   speech.textContent = dialogue[index];
@@ -375,15 +363,16 @@ page = "/" + page.split("/").pop();
 }
 
 
-  /* === AUTO FACTS (EVERY 5s) === */
+  /* facts per second*/
   setInterval(speak, 10000);
 
-  /* === STICK TO BUDDY === */
+  /* follow buddy */
   function follow() {
     updatePosition();
     requestAnimationFrame(follow);
   }
   follow();
 });
+
 
 

@@ -4,8 +4,8 @@ document.addEventListener("DOMContentLoaded", () => {
   if (!buddy) return;
 
   /* main settings */
-  const SPRITE = 500;
-  const SCALE = 500 / SPRITE;
+  const SPRITE = 350;
+  const SCALE = 200 / SPRITE;
   const FRAME = SPRITE;
   const DIAG = 0.7071;
 
@@ -373,6 +373,7 @@ page = "/" + page.split("/").pop();
   }
   follow();
 });
+
 
 
 

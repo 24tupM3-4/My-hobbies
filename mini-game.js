@@ -1,9 +1,3 @@
-/* Mini-game: Buddy Collect — placeholder assets, simple canvas game
-   - Loads when the user clicks the injected button
-   - Draws placeholders until image assets are supplied later
-   - Toggleable overlay, keyboard/mouse controls, simple scoring
-*/
-/* Mini-game button injection (non-destructive) */
 
 console.log("JS is running");
 

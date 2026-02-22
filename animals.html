@@ -1,117 +1,240 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Animals</title>
-  <link rel="stylesheet" href="style.css" />
+
+  <link rel="stylesheet" href="style.css"/>
+  <script src="java.js" defer></script>
+  <script src="horse-race.js" defer></script>
 </head>
-<body>
-  <body data-page="animals">
 
-  <div id="buddy"></div>
-  <div id="buddy-speech"></div>
-  <div class="custom-cursor"></div>
-<script src="java.js" defer></script>
+<body data-page="animals">
 
-  <nav class="top-nav">
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="animals.html">Animals</a></li>
-      <li><a href="games.html">Games</a></li>
-      <li><a href="music.html">Music</a></li>
-    </ul>
-  </nav>
+<!-- Desktop Buddy -->
+<div id="buddy"></div>
+<div id="buddy-speech"></div>
+<div class="custom-cursor"></div>
 
-  <header class="hero-header">
-    <div class="hero-text">
-      <h1>Animals</h1>
-      <p>A special bonding with different species</p>
-    </div>
-  </header>
+<!-- ================= TOP NAV ================= -->
+<header class="top-nav">
 
-
-
-<div class="page-wrapper">
-
- <aside class="side-content left">
-  <h3>🐾 Creature Log</h3>
-
-  <ul class="sidebar-list">
-    <li><span class="icon">🐱</span><span>Cats</span></li>
-    <img src="Image/cattioorange.jpg">
-    <li><span class="icon">🐎</span><span>Horses</span></li>
-    <img src="Image/horse.png">
-    <li><span class="icon">🌿</span><span>Calm environments</span></li>
-    <img src="Image/landscape.jpg">
-    <li><span class="icon">🤍</span><span>Gentle care</span></li>
-    <img src="Image/meowmeow.png">
-  </ul>
-</aside>
-
-
-
-  <main class="main-content">
-
-    <section id="animal-overview">
-      <h2>Animals I’ve Met</h2>
-
-    </section>
-
-    <section id="animal-cards" class="hobbies-list">
-      <div class="hobby-card">
-        <img src="Image/cat.jpg" alt="A beautiful cat" />
-        <h3>Siamese Cat (Visited at Saman Farm)</h3>
-        <p>Friendly and adorable, met this adorable fluff during my visit.</p>
-      </div>
-
-      <div class="hobby-card">
-        <img src="Image/horse.jpg" alt="A horse" />
-        <h3>Horse from Saman Farm</h3>
-        <p>Gentle during our horse trails, also adorable as well.</p>
-      </div>
-    </section>
-
-    <section id="farm-map" class="full-bleed">
-  <h2>Farm Location</h2>
-
-  <div class="map-container">
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d123619.18604958028!2d100.94023569726562!3d14.4789719!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x311dc6a28dc12f2f%3A0x444a8c096a7cb3a1!2z4Liq4Lih4Liy4LiZ4Lif4Liy4Lij4LmM4Lih!5e0!3m2!1sen!2sth!4v1766547338733!5m2!1sen!2sth" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  <div class="top-left">
+    <div class="logo">My <span>Hobbies</span></div>
   </div>
+
+
+  <div class="top-right">
+    <div class="search">
+      <input type="search" placeholder="Search animals..."/>
+      <button>🔍</button>
+    </div>
+    <button class="icon-btn">🔔</button>
+    <button class="icon-btn">⚙️</button>
+    <div class="avatar">👤</div>
+  </div>
+
+</header>
+
+<!-- ================= LAYOUT ================= -->
+<div class="layout">
+
+  <!-- ===== LEFT SIDEBAR ===== -->
+  <aside class="side-content left">
+
+    <h3 class="sidebar-title">Passions</h3>
+
+<ul class="sidebar-menu">
+
+  <li class="menu-item">
+    <a href="index.html" class="menu-link">
+      <span class="menu-icon">🏠</span>
+      <span class="menu-label">Home</span>
+      <span class="menu-count">1</span>
+    </a>
+  </li>
+
+  <li class="menu-item">
+    <a href="animals.html" class="menu-link active">
+      <span class="menu-icon">🐾</span>
+      <span class="menu-label">Animal Care</span>
+      <span class="menu-count">2</span>
+    </a>
+  </li>
+
+  <li class="menu-item">
+    <a href="games.html" class="menu-link">
+      <span class="menu-icon">🎮</span>
+      <span class="menu-label">Gaming</span>
+      <span class="menu-count">12</span>
+    </a>
+  </li>
+
+  <li class="menu-item">
+    <a href="music.html" class="menu-link">
+      <span class="menu-icon">🎵</span>
+      <span class="menu-label">Music</span>
+      <span class="menu-count">15</span>
+    </a>
+  </li>
+
+</ul>
+
+   <div class="sidebar-section">
+      <h4>Collections</h4>
+      <ul class="sidebar-collections">
+        <li>❤ Wishlist</li>
+        <li>⭐ My Favorites</li>
+        <li>🕒 In Progress</li>
+        <li>✅ Completed</li>
+      </ul>
+    </div>
+  </aside>
+
+  <!-- ===== MAIN AREA ===== -->
+  <main class="main-area">
+
+    <!-- LOOP TEXT -->
+    <div class="loop-text">
+      <div class="loop-track">
+        <span>- Taking care of animals - Horses - Cats - Furry Friends -</span>
+        <span>Bonding moments - Gentle companions - Peaceful environments -</span>
+      </div>
+    </div>
+
+    <!-- HERO -->
+    <section class="hero animals-hero">
+      <div class="hero-card">
+
+        <div class="hero-copy">
+          <span class="badge">Animal Encounters</span>
+          <h1>Creatures I’ve <strong>Bonded With</strong></h1>
+          <p>Companions that bring comfort, warmth, and unforgettable memories.</p>
+        </div>
+
+        <div class="hero-visual"></div>
+
+      </div>
+    </section>
+
+    <!-- CARDS -->
+   <section class="cards-grid">
+
+  <article class="category-card">
+
+    <div class="card-icon">🐱</div>
+
+    <h3>Siamese Cat</h3>
+
+    <p>
+      Friendly and adorable — met during my visit to the farm.
+    </p>
+
+  </article>
+
+
+  <article class="category-card">
+
+    <div class="card-icon">🐎</div>
+
+    <h3>Horse</h3>
+
+    <p>
+      Gentle during our horse trails — calm and affectionate.
+    </p>
+
+  </article>
+
 </section>
 
 
+    </section>
+
+    <!-- MAP -->
+    <section id="farm-map">
+
+      <h2>Farm Location</h2>
+
+      <div class="map-container">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18..."
+          loading="lazy">
+        </iframe>
+      </div>
+
+    </section>
+
   </main>
 
+  <!-- ===== RIGHT SIDEBAR ===== -->
+  <aside class="side-content right artist-sidebar">
 
- <aside class="side-content right">
-  <h3>📝 Care Notes</h3>
+    <h3 class="sidebar-title">🐾 Animal Gallery</h3>
 
-  <ul class="sidebar-list">
-    <li><span>Cats are usually independant creatures, so its best not to bother them too much.</span></li>
-    <li><span>Cats are also usually clean, so you don't have to shower them too often.</span></li>
-    <li><span>Cats need taurine, an amino acid which improves their heart and eye health, finding food with these ingredients can help your cat stay healthy.</span></li>
-    <li><span>Horses require extended hours of walking, letting them out for some exercise and fresh air is ideal.</span></li>
-    <li><span>It is best to not stand by a horse's rear end, as it is their blind spot and they will kick you without noticing.</span></li>
-    <li><span>Horses need a hoof check appointments every 4-8 weeks to prevent any injuries from hoof diseases.</span></li>
-  </ul>
-</aside>
+    <ul class="artist-list">
+
+      <li>
+        <img src="Image/horse.jpg" alt="Horse">
+        <div class="artist-item">
+          <span class="artist-name">Horse</span>
+          <div class="care-facts">
+            <strong>Care:</strong>
+            <ul>
+              <li>Feeding: good-quality hay and grain daily.</li>
+              <li>Grooming: brush and check hooves regularly.</li>
+              <li>Exercise: turnout and daily riding or lunging.</li>
+              <li>Health: regular farrier, deworming, and vaccinations.</li>
+            </ul>
+          </div>
+        </div>
+      </li>
+
+      <li>
+        <img src="Image/cat.jpg" alt="Cat">
+        <div class="artist-item">
+          <span class="artist-name">Cat</span>
+          <div class="care-facts">
+            <strong>Care:</strong>
+            <ul>
+              <li>Feeding: balanced cat food, fresh water daily.</li>
+              <li>Litter: keep litter box clean and accessible.</li>
+              <li>Grooming: brush regularly; trim nails as needed.</li>
+              <li>Health: annual vet checks and vaccinations.</li>
+            </ul>
+          </div>
+        </div>
+      </li>
+
+    </ul>
+
+    <div class="vinyl-player">
+      <div class="vinyl-record">
+        <div class="vinyl-center"></div>
+      </div>
+      <div class="vinyl-arm"></div>
+    </div>
+
+    <p style="font-size:0.85rem;color:var(--muted);margin-top:12px">Add your `Image/horse.jpg` and `Image/cat.jpg` files to show photos here.</p>
+
+  </aside>
 
 </div>
 
-<footer>
-  <p>&copy; 3-4 | 24</p>
+<!-- FOOTER -->
+<footer class="page-footer">
+  <p>© 3-4 | 24</p>
 </footer>
 
- <script>
-    const cursor = document.querySelector(".custom-cursor");
-    document.addEventListener("mousemove", e => {
-      cursor.style.left = e.clientX + "px";
-      cursor.style.top = e.clientY + "px";
-    });
-  </script>
+<script>
+const cursor = document.querySelector(".custom-cursor");
+
+document.addEventListener("mousemove", e => {
+  cursor.style.left = e.clientX + "px";
+  cursor.style.top = e.clientY + "px";
+});
+</script>
 
 </body>
 </html>
-
-

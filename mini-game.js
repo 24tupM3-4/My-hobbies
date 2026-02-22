@@ -67,21 +67,6 @@ document.addEventListener('DOMContentLoaded', () => {
   let player = { x: 0, y: 0, w: 64, h: 64 };
   let width = 0, height = 0;
 
-  Object.keys(spritePaths).forEach(name => {
-    // default meta similar to java.js for directional runs
-    spriteMeta[name] = { cols: 10, rows: 2, frames: 18, speed: 90 };
-    if (name === 'idle') spriteMeta[name] = { cols: 10, rows: 34, frames: 340, speed: 110 };
-    buddySprites[name] = { img: new Image(), loaded: false };
-    // try candidates in order
-    (function tryLoad(idx, candidates){
-      if (idx >= candidates.length) return;
-      const img = new Image();
-      img.onload = () => { buddySprites[name].img = img; buddySprites[name].loaded = true; };
-      img.onerror = () => tryLoad(idx+1, candidates);
-      img.src = candidates[idx];
-    })(0, spritePaths[name]);
-  });
-
 
   const assetPaths = {
     collect: ['Image/collect.png'],
@@ -320,32 +305,7 @@ ctx.fillRect(0, canvas.height - 40, canvas.width, 40);
 // 🐴 Draw Horse Emoji Player
 ctx.font = `${player.w}px serif`;
 ctx.textBaseline = "top";
-ctx.fillText("🐎", player.x, player.y);
-    if (spriteInfo && spriteInfo.loaded) {
-      // advance frames by sprite speed
-      spriteTimer += dt || 0;
-      while (spriteTimer >= meta.speed) { spriteTimer -= meta.speed; spriteFrame++; }
-      if (spriteFrame >= meta.frames) spriteFrame = 0;
-      const col = spriteFrame % meta.cols;
-      const row = Math.floor(spriteFrame / meta.cols);
-      try {
-        ctx.drawImage(
-          spriteInfo.img,
-          col * SPRITE_FRAME, row * SPRITE_FRAME, SPRITE_FRAME, SPRITE_FRAME,
-          player.x, player.y, player.w, player.h
-        );
-      } catch(e){
-        // fallback to placeholder if draw fails
-        ctx.fillStyle = '#6fb3ff'; roundRect(ctx, player.x, player.y, player.w, player.h, 10);
-        ctx.fillStyle = '#073b66'; ctx.font = '12px sans-serif'; ctx.fillText('Buddy', player.x + 8, player.y + player.h/2 + 5);
-      }
-    } else {
-      ctx.fillStyle = '#6fb3ff'; roundRect(ctx, player.x, player.y, player.w, player.h, 10);
-      ctx.fillStyle = '#073b66'; ctx.font = '12px sans-serif'; ctx.fillText('Buddy', player.x + 8, player.y + player.h/2 + 5);
-    }
-
-    // remember prev positions for next frame
-    prevX = player.x; prevY = player.y;
+ctx.fillText("🐴", player.x, player.y);
 
     // draw items with shadows (shadows spawn early and darken as they fall)
     const groundY = canvas.height - 24; // where shadows sit (near bottom)

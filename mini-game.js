@@ -67,18 +67,6 @@ document.addEventListener('DOMContentLoaded', () => {
   let player = { x: 0, y: 0, w: 64, h: 64 };
   let width = 0, height = 0;
 
-  
-  
-
-  // Sprite-sheet animation config (match java.js locations)
-  const SPRITE_FRAME = 350; // assumed frame size used by java.js
-  const spritePaths = {
-    idle: { src: "Image/Buddy/idle.png"},
-    runLeft: { src: "Image/Buddy/left.png"},
-    runRight: { src: "Image/Buddy/right.png"}
-  };
-  const buddySprites = {};
-  const spriteMeta = {};
   Object.keys(spritePaths).forEach(name => {
     // default meta similar to java.js for directional runs
     spriteMeta[name] = { cols: 10, rows: 2, frames: 18, speed: 90 };
@@ -329,9 +317,10 @@ ctx.fillRect(0, 0, canvas.width, canvas.height);
 ctx.fillStyle = "#ffffff";
 ctx.fillRect(0, canvas.height - 40, canvas.width, 40);
 
-    // draw player (animated sprite if available)
-    const spriteInfo = buddySprites[currentSprite];
-    const meta = spriteMeta[currentSprite];
+// 🐴 Draw Horse Emoji Player
+ctx.font = `${player.w}px serif`;
+ctx.textBaseline = "top";
+ctx.fillText("🐎", player.x, player.y);
     if (spriteInfo && spriteInfo.loaded) {
       // advance frames by sprite speed
       spriteTimer += dt || 0;

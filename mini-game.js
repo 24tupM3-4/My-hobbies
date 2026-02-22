@@ -73,9 +73,9 @@ document.addEventListener('DOMContentLoaded', () => {
   // Sprite-sheet animation config (match java.js locations)
   const SPRITE_FRAME = 350; // assumed frame size used by java.js
   const spritePaths = {
-    idle: { src: "/My-hobbies/Image/Buddy/idle.png"},
-    runLeft: { src: "/My-hobbies/Image/Buddy/left.png"},
-    runRight: { src: "/My-hobbies/Image/Buddy/right.png"}
+    idle: { src: "My-hobbies/Image/Buddy/idle.png"},
+    runLeft: { src: "My-hobbies/Image/Buddy/left.png"},
+    runRight: { src: "My-hobbies/Image/Buddy/right.png"}
   };
   const buddySprites = {};
   const spriteMeta = {};

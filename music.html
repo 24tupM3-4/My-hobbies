@@ -1,114 +1,199 @@
 <!DOCTYPE html>
+<html lang="en">
+
 <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Music</title>
+
   <link rel="stylesheet" href="style.css" />
+  <script src="java.js"></script>
 </head>
 
-<body>
-  <body data-page="music">
-
-  <div id="buddy"></div>
+<body data-page="music">
+    <div id="buddy"></div>
   <div id="buddy-speech"></div>
-<script src="java.js" defer></script>
-
   <div class="custom-cursor"></div>
 
+  <header class="top-nav">
 
-    <nav class="top-nav">
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="animals.html">Animals</a></li>
-        <li><a href="games.html">Games</a></li>
-        <li><a href="music.html">Music</a></li>
-      </ul>
-    </nav>
-
-
-  <header class="hero-header">
-    <div class="hero-text">
-      <h1>Music</h1>
-      <p>Where sound becomes inspiration</p>
+    <div class="top-left">
+      <div class="logo">My <span>Hobbies</span></div>
     </div>
+  
+  
+    <div class="top-right">
+      <div class="search">
+        <input type="search" placeholder="Search music..." />
+        <button>🔍</button>
+      </div>
+  
+      <button class="icon-btn">🔔</button>
+      <button class="icon-btn">⚙️</button>
+      <div class="avatar">👤</div>
+    </div>
+  
   </header>
 
+<div class="layout">
+
+  <!-- LEFT SIDEBAR -->
+  <aside class="side-content left">
+    <h3 class="sidebar-title">Passions</h3>
+
+ <ul class="sidebar-menu">
+
+  <li class="menu-item">
+    <a href="index.html" class="menu-link">
+      <span class="menu-icon">🏠</span>
+      <span class="menu-label">Home</span>
+      <span class="menu-count">1</span>
+    </a>
+  </li>
+
+  <li class="menu-item">
+    <a href="animals.html" class="menu-link">
+      <span class="menu-icon">🐾</span>
+      <span class="menu-label">Animal Care</span>
+      <span class="menu-count">2</span>
+    </a>
+  </li>
+
+  <li class="menu-item">
+    <a href="games.html" class="menu-link active">
+      <span class="menu-icon">🎮</span>
+      <span class="menu-label">Gaming</span>
+      <span class="menu-count">12</span>
+    </a>
+  </li>
+
+  <li class="menu-item">
+    <a href="music.html" class="menu-link">
+      <span class="menu-icon">🎵</span>
+      <span class="menu-label">Music</span>
+      <span class="menu-count">15</span>
+    </a>
+  </li>
+
+</ul>
+
+    <div class="sidebar-section">
+      <h4>Collections</h4>
+      <ul class="sidebar-collections">
+        <li>❤ Wishlist</li>
+        <li>⭐ My Favorites</li>
+        <li>🕒 In Progress</li>
+        <li>✅ Completed</li>
+      </ul>
+    </div>
+  </aside>
 
 
-  <div class="page-wrapper">
+  <!-- MAIN CONTENT -->
+  <main class="main-area">
 
-   <aside class="side-content">
-  <h3> Music</h3>
+    <!-- LOOP TEXT -->
+    <div class="loop-text" aria-hidden="true">
+      <div class="loop-track">
+        <span>Got any favorite music genres? Let me know if we share any interests!</span>
+        <span>- Vocaloid - J-Pop - Game Soundtracks - Synthwave - Lo-fi -</span>
+      </div>
+    </div>
 
-  <div class="sidebar-music">
-    <span class="sidebar-label">Relaxing</span>
-   <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/6C3NjslaxrAHpiU9W5XTiV?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-<iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/0ZqRlZTgNbQgynrHdxzLHp?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-    <span class="sidebar-label">Upbeat</span>
-<iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/2YAzpDuHmAe5kROOlyDnmv?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-  
-</div>
-</aside>
+    <!-- HERO -->
+    <section class="hero music-hero">
+      <div class="hero-card">
 
-  
-
-    <main class="main-content">
-  
-      <section id="playlist">
-        <h2>My Spotify Playlist</h2>
-        <p>These are some songs & tracks I vibe with often.</p>
-  
-        <div class="music-row">
-          <div class="music-embed">
-          <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/2asWe7CTLmXiGRaWqHZ1rk?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-            </div>
-            <div class="music-embed">
-              <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/4FDr0iOEB8lEDgpvCvEYWi?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-            </div>
-            <div class="music-embed">
-              <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/0uB1QGOrJtZtFslsoSdRAv?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-            </div>
-              <div class="music-embed">
-            <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/2GTnNEuVtXkvHFoFjsIK4e?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        <div class="hero-copy">
+          <span class="badge">Sound & Rhythm</span>
+          <h1>Where Music Becomes <strong>Inspiration</strong></h1>
+          <p>Relaxing, upbeat, and emotional tracks that shape my vibe.</p>
         </div>
-            </div>
-        </section>
-  
-      <div class="divider-neon"></div>
-  
-      <section id="more-music">
-        <h2>Full Playlist</h2>
-        <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/2UB7HZOTv2xcYPjahTYmVL?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-         </section>
-         
-         
-    </main>
-  
-    <aside class="side-content artist-sidebar">
-  <h3> Featured Artists</h3>
 
-  <ul class="artist-list">
-    <li>
-      <img src="Image/boen.jpg" alt="Bo en">
-      <span>Bo en</span>
-    </li>
-    <li>
-      <img src="Image/keinasuda.jpg" alt="Keina Suda">
-      <span>Keina Suda</span>
-    </li>
-    <li>
-      <img src="Image/muship.webp" alt="Mushi-P">
-      <span>Mushi-P</span>
-    </li>
-  </ul>
-</aside>
+        <div class="hero-visual"></div>
 
-  
-  </div>
-  
+      </div>
+    </section>
 
 
-  <footer>
-    <p>&copy; 3-4 | 24</p>
+    <!-- PLAYLIST GRID -->
+    <section id="playlist">
+
+      <h2>My Spotify Picks</h2>
+      <p>Some tracks I keep on repeat.</p>
+
+      <div class="cards-grid">
+
+        <article class="category-card">
+          <div class="card-icon">🎧</div>
+          <h3>Favorite Track</h3>
+          <iframe src="https://open.spotify.com/embed/track/2asWe7CTLmXiGRaWqHZ1rk"
+                  width="100%" height="80"></iframe>
+        </article>
+
+        <article class="category-card">
+          <div class="card-icon">🎵</div>
+          <h3>On Repeat</h3>
+          <iframe src="https://open.spotify.com/embed/track/4FDr0iOEB8lEDgpvCvEYWi"
+                  width="100%" height="80"></iframe>
+        </article>
+
+        <article class="category-card">
+          <div class="card-icon">💿</div>
+          <h3>Chill Vibes</h3>
+          <iframe src="https://open.spotify.com/embed/track/0uB1QGOrJtZtFslsoSdRAv"
+                  width="100%" height="80"></iframe>
+        </article>
+
+        <article class="category-card">
+          <div class="card-icon">🔊</div>
+          <h3>Late Night</h3>
+          <iframe src="https://open.spotify.com/embed/track/2GTnNEuVtXkvHFoFjsIK4e"
+                  width="100%" height="80"></iframe>
+        </article>
+
+      </div>
+    </section>
+
+
+    <div class="divider-neon"></div>
+
+
+    <!-- FULL PLAYLIST -->
+    <section id="more-music">
+      <h2>Full Playlist</h2>
+
+      <iframe
+        src="https://open.spotify.com/embed/playlist/2UB7HZOTv2xcYPjahTYmVL"
+        width="100%"
+        height="380">
+      </iframe>
+    </section>
+
+  </main>
+
+
+  <!-- RIGHT SIDEBAR -->
+  <aside class="side-content right artist-sidebar">
+
+    <h3 class="sidebar-title">🎤 Featured Artists</h3>
+
+    <ul class="artist-list">
+      <li><img src="Image/boen.jpg"><span>Bo en</span></li>
+      <li><img src="Image/keinasuda.jpg"><span>Keina Suda</span></li>
+      <li><img src="Image/muship.webp"><span>Mushi-P</span></li>
+    </ul>
+
+  </aside>
+
+</div>
+
+
+  <!-- FOOTER -->
+  <footer class="page-footer">
+    <p>© 3-4 | 24 </p>
   </footer>
+
 
   <script>
     const cursor = document.querySelector(".custom-cursor");
@@ -120,4 +205,3 @@
 
 </body>
 </html>
-

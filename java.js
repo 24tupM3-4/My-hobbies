@@ -310,6 +310,7 @@ page = "/" + page.split("/").pop();
       "Welcome to my page!",
       "How are you today?",
       "Hope you have a great time checking out my hobbies!"
+      "Heya, I'm getting quite bored, why dont we getcha some carrots?"
     ],
     "/music.html": [
       "Did you know? Soothing music can ease anxiety.",
@@ -415,6 +416,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+
 
 
 

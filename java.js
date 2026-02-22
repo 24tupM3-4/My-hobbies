@@ -374,9 +374,47 @@ page = "/" + page.split("/").pop();
   follow();
 });
 
+/*old items*/
+window.onscroll = function() {myFunction()};
 
+function myFunction() {
+  var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+  var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  var scrolled = (winScroll / height) * 100;
+  document.getElementById("myBar").style.width = scrolled + "%";
+}
 
+/* Mini-game button injection (non-destructive) */
+document.addEventListener("DOMContentLoaded", () => {
+  const topRight = document.querySelector('.top-right');
+  if (!topRight) return;
 
+  const btn = document.createElement('button');
+  btn.id = 'mini-game-btn';
+  btn.className = 'icon-btn';
+  btn.title = 'Play: Carrot Collect';
+  btn.textContent = 'Carrot Collect';
+
+  topRight.insertBefore(btn, topRight.firstChild);
+
+  btn.addEventListener('click', () => {
+    if (window.MiniGame && typeof window.MiniGame.toggle === 'function') {
+      window.MiniGame.toggle();
+      return;
+    }
+
+    // load the mini-game script once and open when ready
+    if (!document.querySelector('script[data-mini-game]')) {
+      const s = document.createElement('script');
+      s.src = 'mini-game.js';
+      s.setAttribute('data-mini-game', '1');
+      s.onload = () => {
+        window.MiniGame && window.MiniGame.open();
+      };
+      document.body.appendChild(s);
+    }
+  });
+});
 
 
 

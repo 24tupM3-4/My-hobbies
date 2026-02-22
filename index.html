@@ -1,135 +1,194 @@
 <!DOCTYPE html>
 
-        <head>
-          <div class="custom-cursor"></div>
-          <link rel="stylesheet" href="style.css" />
+<head>
+<div class="custom-cursor"></div>
+<link rel="stylesheet" href="style.css" />
 
-          <script src="java.js" defer></script>
-        </head>
+ <script src="java.js" defer></script>
+ 
+ </head>
 
-        <body data-page="index">
-
-          <div id="buddy"></div>
-          <div id="buddy-speech"></div>
-
-
-          <nav class="top-nav">
-            <ul>
-              <li><a href="index.html">Home</a></li>
-              <li><a href="animals.html">Animals</a></li>
-              <li><a href="games.html">Games</a></li>
-              <li><a href="music.html">Music</a></li>
-            </ul>
-          </nav>
-
-          <header class="hero-header">
-            <div class="hero-text">
-              <h1>Welcome</h1>
-              <p>to a page of my interests</p>
-            </div>
-          </header>
-
-          <div class="loop-text">
-            <div class="loop-track">
-              <span>Your scrolling text here
-                i am an egg and i can confirm it
-                i am an egg and i can confirm it
-                i am an egg and i can confirm it (Long text test)
-              </span>
-              <span>Your scrolling text here
-                i am an egg and i can confirm it
-                i am an egg and i can confirm it
-                i am an egg and i can confirm it (Long text test)
-              </span>
-              <span>i am an egg and i can confirm it
-                i am an egg and i can confirm it
-                i am an egg and i can confirm it
-                i am an egg and i can confirm it (Long text test)
-              </span>
-            </div>
-          </div> 
-
-        <div class="ui-divider"></div>
-          <div class="page-wrapper">
-
-            <aside class="side-content left">
-              <div class="sidebar-list">
-              <img src="Image/clouddecor.jpg">
-              <img src="Image/tigerdeco.jpg">
-              <img src="Image/chinadecor.jpg">
-              </div>
-            </aside>
-
-                       
-
-            <main class="main-content">
-  <h2>About Me</h2>
-  <div class="about-card">
-    <p>
-      Hello! My name is Ninja, and I'm excited to share some of my interests to you.
-    </p>
+ <body data-page="index">
+  <div id="buddy"></div>
+  <div id="buddy-speech"></div>
+<header class="top-nav">
+  <div class="top-left">
+    <div class="logo">My <span>Hobbies</span></div>
   </div>
-</section>
 
-        <div class="ui-divider"></div>
-              <section id="interests">
-                <h2>My Interests</h2>
 
-                <div class="hobbies-list">
+  <div class="top-right">
+    <div class="search">
+      <input type="search" placeholder="Search hobbies..." />
+      <button aria-label="Search">🔍</button>
+    </div>
+    <button class="icon-btn">🔔</button>
+    <button class="icon-btn">⚙️</button>
+    <div class="avatar">👤</div>
+  </div>
+</header>
 
-                  <div class="hobby-card">
-                    <img src="Image/animals.webp" alt="Animals">
-                    <div class="text">
-                      <h3>Bonding with Animals</h3>
-                      <p>I love caring for cats, horses, and other pets.</p>
-                    </div>
-                  </div>
+<div class="layout">
+  <!-- LEFT SIDEBAR -->
+  <aside class="side-content left">
+    <h3 class="sidebar-title">Passions</h3>
 
-                  <div class="hobby-card">
-                    <img src="Image/games.webp" alt="Games">
-                    <div class="text">
-                      <h3>Playing Games</h3>
-                      <p>Gaming is fun, from casual to serious sessions.</p>
-                    </div>
-                  </div>
+    <ul class="sidebar-menu">
 
-                  <div class="hobby-card">
-                    <img src="Image/music.jpg" alt="Music">
-                    <div class="text">
-                      <h3>Music</h3>
-                      <p>Listening to them makes me feel relaxed.</p>
-                    </div>
-                  </div>
+  <li class="menu-item">
+    <a href="index.html" class="menu-link active">
+      <span class="menu-icon">🏠</span>
+      <span class="menu-label">Home</span>
+      <span class="menu-count">1</span>
+    </a>
+  </li>
 
-                </div>
-              </section>
-        <div class="ui-divider"></div>
-            </main>
+  <li class="menu-item">
+    <a href="animals.html" class="menu-link">
+      <span class="menu-icon">🐾</span>
+      <span class="menu-label">Animal Care</span>
+      <span class="menu-count">2</span>
+    </a>
+  </li>
 
-            <aside class="side-content right">
-                <div class="sidebar-list">
-              <img src="Image/goldship1.jpg">
-              <img src="Image/agnes tachyon   𝜗ৎ.jpg">
-              <img src="Image/vodkauma.jpg">
-              </div>
-            </aside>
+  <li class="menu-item">
+    <a href="games.html" class="menu-link">
+      <span class="menu-icon">🎮</span>
+      <span class="menu-label">Gaming</span>
+      <span class="menu-count">12</span>
+    </a>
+  </li>
 
-          </div>
+  <li class="menu-item">
+    <a href="music.html" class="menu-link">
+      <span class="menu-icon">🎵</span>
+      <span class="menu-label">Music</span>
+      <span class="menu-count">15</span>
+    </a>
+  </li>
 
-          <section id="contact" class="contact-section">
-            <div class="contact-form">
-              <h2>Contact Me</h2>
-              <form>
-                <input type="text" name="name" placeholder="Your username (Platform)" />
-                <input type="text" name="interests" placeholder="Your interests / hobbies" />
-                <button type="submit">Send</button>
-              </form>
-            </div>
-          </section>
+</ul>
 
-          <footer>
-            <p>&copy; 3-4 | 24</p>
-          </footer>
+    <div class="sidebar-section">
+      <h4>Collections</h4>
+      <ul class="sidebar-collections">
+        <li>❤ Wishlist</li>
+        <li>⭐ My Favorites</li>
+        <li>🕒 In Progress</li>
+        <li>✅ Completed</li>
+      </ul>
+    </div>
+  </aside>
+
+  <!-- MAIN CONTENT -->
+  <main class="main-area">
+    <!-- marquee / loop text -->
+    <div class="loop-text" aria-hidden="true">
+      <div class="loop-track">
+        <span>Find joy in the hobbies you enjoy the most. Whether it's caring for animals, gaming, or listening to music, make time for what makes you happy. </span>
+        <span>Do what makes you happy in your life.</span>
+      </div>
+    </div>
+
+    <!-- HERO CARD -->
+    <section class="hero">
+      <div class="hero-card">
+        <div class="hero-copy">
+          <span class="badge">Welcome to My World</span>
+          <h1>Explore My <strong>Passion Projects</strong></h1>
+          <p>Hi, my name is Ninja. These are the activities I enjoy the most.</p>
+        </div>
+
+        <div class="hero-visual" aria-hidden="true">
+        </div>
+      </div>
+    </section>
+
+    <!-- STATS ROW -->
+    <section class="stats-row">
+      <div class="stat-card">
+        <div class="stat-icon">🔥</div>
+        <div class="stat-num">3</div>
+        <div class="stat-label">Active Hobbies</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon">🏆</div>
+        <div class="stat-num">42</div>
+        <div class="stat-label">In-Game Achievements</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon">⏱</div>
+        <div class="stat-num">1,247</div>
+        <div class="stat-label">Hours doing my favorite things</div>
+        </div>
+      <div class="stat-card">
+        <div class="stat-icon">⭐</div>
+        <div class="stat-num">96%</div>
+        <div class="stat-label">Satisfaction</div>
+      </div>
+    </section>
+
+    <!-- CATEGORY CARDS GRID -->
+    <section class="cards-grid">
+      <article class="category-card">
+        <div class="card-icon">🐾</div>
+        <h3>Animal Care</h3>
+        <p>Dedication to the wellbeing of the animals I enjoy caring for.</p>
+        <a class="card-cta" href="animals.html">Explore →</a>
+      </article>
+
+      <article class="category-card">
+        <div class="card-icon">🎮</div>
+        <h3>Gaming</h3>
+        <p>A digital place to unwind and explore immersive worlds.</p>
+        <a class="card-cta" href="games.html">Explore →</a>
+      </article>
+
+      <article class="category-card">
+        <div class="card-icon">🎵</div>
+        <h3>Music</h3>
+        <p>Some tunes to relax and enjoy my favorite genres.</p>
+        <a class="card-cta" href="music.html">Explore →</a>
+      </article>
+    </section>
+  </main>
+  <!-- RIGHT SIDEBAR -->
+  <aside class="side-content right artist-sidebar">
+    <h3 class="sidebar-title">✨ Featured Picks</h3>
+
+    <ul class="artist-list">
+
+      <li>
+        <img src="Image/hero-placeholder.jpg" alt="Spotlight">
+        <span>Spotlight</span>
+      </li>
+
+      <li>
+        <img src="Image/boen.jpg" alt="Bo en">
+        <span>Bo en</span>
+      </li>
+
+      <li>
+        <img src="Image/baba.jpg" alt="Baba Is You">
+        <span>Baba Is You</span>
+      </li>
+
+    </ul>
+
+    <div class="vinyl-player">
+      <div class="vinyl-record">
+        <div class="vinyl-center"></div>
+      </div>
+      <div class="vinyl-arm"></div>
+    </div>
+
+  </aside>
+
+</div>
+
+<footer class="page-footer">
+  <p>© 3-4 | 24 </p>
+</footer>
 
  <script>
     const cursor = document.querySelector(".custom-cursor");
@@ -141,4 +200,5 @@
 
         </body>
         </html>
+
 

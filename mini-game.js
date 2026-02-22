@@ -67,27 +67,6 @@ document.addEventListener('DOMContentLoaded', () => {
   let player = { x: 0, y: 0, w: 64, h: 64 };
   let width = 0, height = 0;
 
-
-  const assetPaths = {
-    collect: ['Image/collect.png'],
-    obstacle: ['Image/obstacle.png']
-  };
-  const assetImgs = { collect: {img:new Image(), loaded:false}, obstacle: {img:new Image(), loaded:false} };
-  Object.keys(assetPaths).forEach(kind => {
-    const p = assetPaths[kind][0];
-    const img = new Image();
-    img.onload = () => { assetImgs[kind].img = img; assetImgs[kind].loaded = true; };
-    img.onerror = () => {console.warn(`Failed to load asset for ${kind} from ${p}`); };
-    img.src = p;
-  });
-
-
-  let currentSprite = 'idle';
-  let spriteFrame = 0;
-  let spriteTimer = 0;
-
-  let prevX = 0, prevY = 0;
-
   function createOverlay(){
     if (overlay) return;
     overlay = document.createElement('div');
@@ -215,19 +194,6 @@ player.x += player.vx;
     // lock vertical position to ground so Buddy cannot move vertically
     player.y = height - player.h - 12;
 
-    // compute simple velocity from position delta
-    const vx = player.x - prevX;
-    const vy = player.y - prevY;
-
-    // determine sprite from velocity (horizontal only)
-    function pickSpriteFromVel(vx, vy){
-      const ax = Math.abs(vx);
-      if (ax < 0.5) return 'idle';
-      return vx > 0 ? 'runRight' : 'runLeft';
-    }
-    const desiredSprite = pickSpriteFromVel(vx, vy);
-    if (desiredSprite !== currentSprite) { currentSprite = desiredSprite; spriteFrame = 0; spriteTimer = 0; }
-    // clamp
     player.x = Math.max(0, Math.min(canvas.width - player.w, player.x));
     player.y = Math.max(0, Math.min(canvas.height - player.h, player.y));
 
@@ -305,7 +271,7 @@ ctx.fillRect(0, canvas.height - 40, canvas.width, 40);
 // 🐴 Draw Horse Emoji Player
 ctx.font = `${player.w}px serif`;
 ctx.textBaseline = "top";
-ctx.fillText("🐴", player.x, player.y);
+ctx.fillText("🐎", player.x, player.y);
 
     // draw items with shadows (shadows spawn early and darken as they fall)
     const groundY = canvas.height - 24; // where shadows sit (near bottom)
@@ -319,28 +285,32 @@ ctx.fillText("🐴", player.x, player.y);
       ctx.fillStyle = `rgba(0,0,0,${it.shadowAlpha.toFixed(3)})`;
       ctx.fill();
 
-      // draw item: if an asset image is loaded for this kind, draw it; otherwise draw placeholder
-      const asset = assetImgs[it.kind];
-      if (asset && asset.loaded) {
-        try {
-          ctx.drawImage(asset.img, it.x, it.y, it.size, it.size);
-        } catch(e) {
-          // fallback to shape if draw fails
-        }
-      }
-      if (!asset || !asset.loaded) {
-        if (it.kind === 'collect'){
-          // cloud placeholder
-          ctx.fillStyle = 'rgba(255,255,255,0.95)';
-          ctx.beginPath(); ctx.arc(it.x + it.size*0.3, it.y + it.size*0.5, it.size*0.28,0,Math.PI*2); ctx.fill();
-          ctx.beginPath(); ctx.arc(it.x + it.size*0.6, it.y + it.size*0.46, it.size*0.24,0,Math.PI*2); ctx.fill();
-          ctx.fillStyle = '#b6d8ff'; ctx.fillRect(it.x + it.size*0.08, it.y + it.size*0.6, it.size*0.7, Math.max(4, it.size*0.12));
-        } else {
+      // 🥕 Draw items as emoji
+if (it.kind === 'collect') {
+  ctx.save();
+  ctx.font = `${it.size}px serif`;
+  ctx.textAlign = "center";
+  ctx.textBaseline = "middle";
+  ctx.fillText("🥕", it.x + it.size/2, it.y + it.size/2);
+  ctx.restore();
+} else {
+  ctx.save();
+  ctx.font = `${it.size}px serif`;
+  ctx.textAlign = "center";
+  ctx.textBaseline = "middle";
+  ctx.fillText("❄️", it.x + it.size/2, it.y + it.size/2);
+  ctx.restore();
+}
+      
+      
+
+        if (it.kind === 'collect'){} 
+        else {
        // snowflake emoji obstacle
 ctx.font = `${it.size}px serif`;
 ctx.fillText("❄️", it.x, it.y + it.size);
         }
-      }
+      
     });
 
     // HUD lives
@@ -348,14 +318,6 @@ ctx.fillText("❄️", it.x, it.y + it.size);
     ctx.fillStyle = 'var(--gold)'; ctx.font = '14px sans-serif'; ctx.fillText('Lives: ' + lives, 14, 26);
   }
 
-  function roundRect(ctx, x, y, w, h, r){
-    ctx.beginPath(); ctx.moveTo(x + r, y);
-    ctx.arcTo(x + w, y, x + w, y + h, r);
-    ctx.arcTo(x + w, y + h, x, y + h, r);
-    ctx.arcTo(x, y + h, x, y, r);
-    ctx.arcTo(x, y, x + w, y, r);
-    ctx.closePath(); ctx.fill();
-  }
 
   MiniGame.open = open;
   MiniGame.close = close;
@@ -364,4 +326,6 @@ ctx.fillText("❄️", it.x, it.y + it.size);
 
   // auto-init: expose globally
   window.MiniGame = MiniGame;
+  ctx.restore();
+
 })();
